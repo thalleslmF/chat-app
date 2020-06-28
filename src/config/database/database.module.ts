@@ -8,7 +8,7 @@ import { MessageEntity } from '../../message/message.entity';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'localhost',
+      host: process.env.DATABASE_URL || 'localhost',
       port: 5432,
       username: 'masterdev',
       password: 'masterdev',
