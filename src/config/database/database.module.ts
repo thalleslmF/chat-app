@@ -8,7 +8,7 @@ import { MessageEntity } from '../../message/message.entity';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      url: process.env.DATABASE_URL
+      url: process.env.DATABASE_URL,
       entities: [ChatEntity, UserEntity, MessageEntity],
       synchronize: true,
     }),
